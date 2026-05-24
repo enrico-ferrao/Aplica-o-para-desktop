@@ -8,9 +8,10 @@ def consulta_cardapio():
     cursor.execute(sql)
     cardapio = cursor.fetchall()
     cursor.close()
-    return cardapio
+    
 
-cardapio = consulta_cardapio()
+    for item in cardapio:
+        print (f"Nome: {item[1]} Preço: R$ {item[2]} Categoria: {item[3]} \n")
+    return 
 
-for item in cardapio:
-    print (f"Nome: {item[1]} Preço: R$ {item[2]} Categoria: {item[3]} \n")
+print(consulta_cardapio())
