@@ -5,7 +5,7 @@ from banco import conexao
 
 def cadastro_itens():
     nome = input("Qual nome do item? ")
-    preco = input("Qual valor do produto? ")
+    preco = input("Qual valor do produto? ").replace(",",".")
     categoria = input("Qual categoria do produto? ")
     
     cursor = conexao.cursor()
