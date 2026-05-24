@@ -1,0 +1,18 @@
+-- IMPORTANTE
+CREATE SCHEMA delivery_db;
+USE delivery_db;
+-- Login / Senha
+CREATE TABLE credenciais (
+			cod_id SMALLINT PRIMARY KEY AUTO_INCREMENT,
+			login varchar(50) NOT NULL,
+            senha varchar(50) NOT NULL
+            
+);
+
+-- cardapio
+CREATE TABLE cardapio (
+	comida_id SMALLINT PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR(50) NOT NULL,
+	preco DECIMAL(10,2) NOT NULL,
+	categoria VARCHAR(50) NOT NULL
+);
