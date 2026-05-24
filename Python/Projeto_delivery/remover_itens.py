@@ -17,3 +17,5 @@ def remover_itens():
     
     cursor.close()
     return "Item não encontrado!"
+
+print(remover_itens())
