@@ -1,2 +1,2 @@
 import tkinter as tk
-from login import logins
+from funcoes import *
