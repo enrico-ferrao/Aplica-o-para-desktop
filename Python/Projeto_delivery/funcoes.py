@@ -1,13 +1,11 @@
 import requests
 from banco import conexao
 
-url = f"https://nominatim.openstreetmap.org/search?q={rua}&format=json"
 
 #coleta e validação de login
-def logins():
-    login_usuario = input("Digite seu usuario: ")
-    senha_usuario = input("Digite sua senha: ")
-    cursor = conexao.cursor()
+def logins(login_usuario, senha_usuario):
+
+    cursor = conexao.cursor(buffered=True)
     sql = "SELECT login,senha FROM credenciais WHERE login = %s"
     cursor.execute(sql,(login_usuario,))
     dados = cursor.fetchone()
@@ -128,8 +126,7 @@ def remover_itens():
 #calculador de frete
 def calcular_frete():
     rua = input("Qual o nome da rua? ").replace(" ","+")
+    url = f"https://nominatim.openstreetmap.org/search?q={rua}&format=json"
     
 
 
-#finalizando
-print(logins())
