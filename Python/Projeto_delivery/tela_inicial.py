@@ -8,6 +8,7 @@ def tela_T():
 
 
 def tela_P():
+    subprocess.Popen([sys.executable,"Projeto_delivery/tela_pedidos.py"])
     janela.destroy()
 
 def tela_S():
