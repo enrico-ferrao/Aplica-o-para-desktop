@@ -73,10 +73,7 @@ def consulta_cardapio():
     cardapio = cursor.fetchall()
     cursor.close()
     
-
-    for item in cardapio:
-        print (f"Nome: {item[1]} Preço: R$ {item[2]} Categoria: {item[3]} \n")
-    return 
+    return cardapio
 
 #cadastro do cardapio
 def cadastro_itens():
@@ -128,5 +125,3 @@ def calcular_frete():
     rua = input("Qual o nome da rua? ").replace(" ","+")
     url = f"https://nominatim.openstreetmap.org/search?q={rua}&format=json"
     
-
-
