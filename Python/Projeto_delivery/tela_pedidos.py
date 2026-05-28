@@ -69,12 +69,14 @@ botao_add =tk.Button(
 )
 botao_add.pack(anchor = "e", padx =  68)
 
+
+label_titulo_rmv = tk.Label(janela,text = "Remover produtos do cardapio SGBD", font = ("Arial", 10) )
+label_titulo_rmv.pack(anchor = "e", padx = 10)
+
 frame_funcoes_remover = tk.Frame (janela, bg = "white", bd = 3, relief = "solid")
 frame_funcoes_remover.pack(anchor = "e" , pady = 10)
 
 
-label_titulo_rmv = tk.Label(janela,text = "Remover produtos do cardapio SGBD", font = ("Arial", 10) )
-label_titulo_rmv.pack(anchor = "e", padx = 10)
 #titulo remover
 label_titulo_remover = tk.Label(frame_funcoes_remover, text = "Remover item")
 label_titulo_remover.pack(pady = 10, anchor = "e", padx =  69)
