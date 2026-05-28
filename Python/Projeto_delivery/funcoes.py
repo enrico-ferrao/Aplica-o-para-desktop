@@ -1,4 +1,3 @@
-import requests
 from banco import conexao
 
 
