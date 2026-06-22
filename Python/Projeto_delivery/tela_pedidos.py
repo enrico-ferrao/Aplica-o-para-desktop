@@ -93,11 +93,28 @@ botao_remover = tk.Button (
 )
 botao_remover.pack(anchor = "e", padx =  68)
 
+
+frame_pedido = tk.Frame(janela,bg = "White", bd = 3, relief = "solid")
+frame_pedido.pack()
+
+#titulo pedido
+label_pedido = tk.Label(frame_pedido, text = "Pedido:", font = ("Arial", 10))
+label_pedido.pack(pady = 10)
+
+#entrada pedido
+entrada_pedido = tk.Entry(frame_pedido)
+entrada_pedido.pack(pady = 5)
+#botao adicionar
+botao_pedido = tk.Button(
+    frame_pedido,
+    text = "Adicionar"
+)
+botao_pedido.pack()
 botao_incial = tk.Button(
     janela,
     text = "Tela incial",
     command = botao_l
 )
-botao_incial.pack()
+botao_incial.pack(pady = 50)
 #iniciar
 janela.mainloop()
